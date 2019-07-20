@@ -55,107 +55,15 @@ public class Levels : MonoBehaviour {
         startGame = true;
        startPanel.SetActive(false);
     }
-
-    public void ReinitializeLevel1 ()
+    public void NextLevel()
     {
-        SceneManager.LoadSceneAsync("SampleScene");
-        //ShowBannerAd();
+        Application.LoadLevel(Application.loadedLevel + 1);
     }
-
-    public void Level2 ()
+    public void LoadMyLevel()
     {
-        SceneManager.LoadSceneAsync("Level2");
-        //ShowVideoAd();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void Level3 ()
-    {
-        SceneManager.LoadSceneAsync("Level3");
-        //ShowVideoAd();
-    }
-    public void Level4 ()
-    {
-        SceneManager.LoadSceneAsync("Level4");
-        //ShowBannerAd(); ;
-    }
-    public void Level5 ()
-    {
-        SceneManager.LoadSceneAsync("Level5");       
-    }
-    public void Level6()
-    {
-        SceneManager.LoadSceneAsync("Level6");
-    }
-    public void Level7()
-    {
-        SceneManager.LoadSceneAsync("Level7");
-    }
-    public void Level8()
-    {
-        SceneManager.LoadSceneAsync("Level8");
-    }
-    public void Level9()
-    {
-        SceneManager.LoadSceneAsync("Level9");
-    }
-    public void Level10()
-    {
-        SceneManager.LoadSceneAsync("Level10");
-    }
-    /// <summary>
-    ///  AQUI SE INICIA O CARREGAMENTO DAS PRÓXIMAS CENAS DO GAME 
-    /// </summary>
-    public void InitializeGame()
-    {
-        SceneManager.LoadScene("SampleScene");
-        //ShowBannerAd(); ;
-    }
-
-    public void NextLevel2()
-    {
-        SceneManager.LoadScene("Level2");
-        //ShowBannerAd(); ;
-    }
-
-    public void NextLevel3()
-    {
-        SceneManager.LoadScene("Level3");
-        //ShowVideoAd();
-    }
-    public void NextLevel4()
-    {
-        SceneManager.LoadScene("Level4");
-        //ShowVideoAd();
-    }
-    public void NextLevel5()
-    {
-        SceneManager.LoadScene("Level5");      
-    }
-    public void NextLevel6()
-    {
-        SceneManager.LoadScene("Level6");      
-    }
-    public void NextLevel7()
-    {
-        SceneManager.LoadScene("Level7");      
-    }
-    public void NextLevel8()
-    {
-        SceneManager.LoadScene("Level8");      
-    }
-    public void NextLevel9()
-    {
-        SceneManager.LoadScene("Level9");      
-    }
-    public void NextLevel10()
-    {
-        SceneManager.LoadScene("Level10");      
-    }
-    public void Finished()
-    {
-        SceneManager.LoadScene("FinishGame");      
-    }
-
+             
    public IEnumerator Reload ()
     {
         yield return new WaitForSeconds(1.7f);

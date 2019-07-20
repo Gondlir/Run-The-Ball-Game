@@ -10449,7 +10449,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1542170308}
-        m_MethodName: NextLevel2
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11334,7 +11334,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1542170308}
-        m_MethodName: ReinitializeLevel1
+        m_MethodName: LoadMyLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
