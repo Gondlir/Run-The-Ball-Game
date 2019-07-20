@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Monetization;
 
 public class Levels : MonoBehaviour {
-    
+
     public static Levels myLevel;
     public GameObject panel;
     public GameObject finish;
@@ -16,13 +16,14 @@ public class Levels : MonoBehaviour {
     private string adVideo = "video";
     private string adBanner = "LevelComplete";
     private string rewardVid = "rewardedVideo";
-    
-	void Start ()
+    private int nextScene;
+
+    void Start()
     {
-       // Monetization.Initialize(storeId, true);
+        // Monetization.Initialize(storeId, true);
         //ShowVideoAd();
         Levels.myLevel = this;
-	}
+    }
     /*
     public void ShowVideoAd()
     {
@@ -50,20 +51,22 @@ public class Levels : MonoBehaviour {
         }
     }
     */
-    public void StartGame ()
+    public void StartGame()
     {
         startGame = true;
-       startPanel.SetActive(false);
+        startPanel.SetActive(false);
     }
-    public void NextLevel()
+
+    public void NextScene()
     {
-        Application.LoadLevel(Application.loadedLevel + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadMyLevel()
+    public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-             
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    } 
+    
    public IEnumerator Reload ()
     {
         yield return new WaitForSeconds(1.7f);
