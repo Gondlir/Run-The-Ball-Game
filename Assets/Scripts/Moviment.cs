@@ -16,9 +16,9 @@ public class Moviment : MonoBehaviour {
 
     private float speed = 9f;
     private float speedBol = 3.5f;
-    private float velocidadeBola = 6.7f;
+    private float ballVelocity = 6.7f;
     private float velCam;
-    private float forçaBola;
+    private float ballStrenght;
 
     public AudioSource winAudio;
     public AudioSource boomAudio;
@@ -43,7 +43,7 @@ public class Moviment : MonoBehaviour {
         Forward();       
          if (Input.GetMouseButton(0))
          {
-             transform.Translate(Vector3.forward * velocidadeBola * Time.fixedDeltaTime, Space.World);
+             transform.Translate(Vector3.forward * ballVelocity * Time.fixedDeltaTime, Space.World);
              MovimentPlayer();
              float move = Input.GetAxisRaw("Horizontal") * speed * Time.fixedDeltaTime;
              transform.Translate(Vector3.right * move, Space.World);
