@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Monetization;
+using UnityEngine.UI;
 
 public class Levels : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class Levels : MonoBehaviour {
     public GameObject panel;
     public GameObject finish;
     public GameObject startPanel;
+    public GameObject backgroundConfigImage;
+    public GameObject exitButton;
+
     public bool startGame = false;
 
     private string storeId = "3062053";
@@ -51,6 +55,20 @@ public class Levels : MonoBehaviour {
         }
     }
     */
+    public void ConfiButton()
+    {
+        Time.timeScale = 0;
+
+        backgroundConfigImage.SetActive(true);
+        exitButton.SetActive(true);
+                     
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("saiu");
+    }
+
     public void StartGame()
     {
         startGame = true;
