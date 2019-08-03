@@ -2,32 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEngine.UI;
+using System;
 
 public class SavePlayerCurrentScene : MonoBehaviour {
 
-    string scene;
-    Scene myCurrentScene;
+    public string scene;
+    public Scene myCurrentScene;
 
     private void Start()
-    {
-                
-        Debug.Log("iniciou cena em: " + scene);       
+    {                
+        Debug.Log("iniciou cena em: " + myCurrentScene.name);       
     }
     
     void Update ()
     {
         myCurrentScene = SceneManager.GetActiveScene();
-        scene = myCurrentScene.name;
-
-        Debug.Log("Cena rodando é: " + scene);
-        //PlayerPrefs.GetString(scene);
-        // PlayerPrefs.Save();
+        scene = myCurrentScene.name.ToString();
+        Debug.Log("Cena rodando é: " + scene);       
     }
+    
     private void OnApplicationQuit()
-    {       
-        SceneManager.GetSceneByName(scene);
-        Debug.Log("Cena quando saiu é: " + scene);
-        PlayerPrefs.GetString(scene);      
+    {
+        //In Unity Editor
+        int myScene = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Cena quando saiu é: " + myScene);     
+        PlayerPrefs.SetInt("SavedScene", myScene);                        
     }
-     
+ 
+    private void OnApplicationPause()
+    {
+        //In Android
+        int myScene = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Cena quando saiu é: " + myScene);      
+        PlayerPrefs.SetInt("SavedScene", myScene);
+    }
 }

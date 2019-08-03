@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Monetization;
 using UnityEngine.UI;
-
+using System.IO;
 public class Levels : MonoBehaviour {
 
     public static Levels myLevel;
@@ -21,7 +21,10 @@ public class Levels : MonoBehaviour {
     private string adBanner = "LevelComplete";
     private string rewardVid = "rewardedVideo";
     private int nextScene;
-
+    
+    private Scene myScenes;
+    string scene;
+    int sceneToLoad;
     void Start()
     {
         // Monetization.Initialize(storeId, true);
@@ -73,8 +76,16 @@ public class Levels : MonoBehaviour {
     {
         startGame = true;
         startPanel.SetActive(false);
+    }   
+    public void LastScene()
+    {
+        //Menu Button "Play"
+        sceneToLoad = PlayerPrefs.GetInt("SavedScene");
+        if (sceneToLoad == 0)
+            SceneManager.LoadScene("Level1");
+        else if (sceneToLoad != 0)
+            SceneManager.LoadScene(sceneToLoad);             
     }
-
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

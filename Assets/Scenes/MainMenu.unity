@@ -500,7 +500,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1496914942}
-        m_MethodName: NextScene
+        m_MethodName: LastScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -652,6 +652,8 @@ MonoBehaviour:
   panel: {fileID: 0}
   finish: {fileID: 0}
   startPanel: {fileID: 0}
+  backgroundConfigImage: {fileID: 0}
+  exitButton: {fileID: 0}
   startGame: 0
 --- !u!4 &1496914943
 Transform:
