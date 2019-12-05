@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14581496, g: 0.13377205, b: 0.24863783, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20958,6 +20958,8 @@ MonoBehaviour:
   panel: {fileID: 720942205}
   finish: {fileID: 2016200109}
   startPanel: {fileID: 108977864}
+  backgroundConfigImage: {fileID: 0}
+  exitButton: {fileID: 0}
   startGame: 0
 --- !u!4 &1542170309
 Transform:
@@ -25570,6 +25572,9 @@ MonoBehaviour:
   myCamBody: {fileID: 534669907}
   myBody: {fileID: 1997690289}
   explosion: {fileID: 1003653346498418, guid: 1eb4d2cad6d55dc46b615828b07a81a3, type: 2}
+  shaker: {fileID: 0}
+  winAudio: {fileID: 0}
+  boomAudio: {fileID: 0}
 --- !u!1 &2004691018
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Monetization;
 using UnityEngine.UI;
 using System.IO;
 public class Levels : MonoBehaviour {
@@ -14,62 +13,25 @@ public class Levels : MonoBehaviour {
     public GameObject backgroundConfigImage;
     public GameObject exitButton;
 
-    public bool startGame = false;
-
-    private string storeId = "3062053";
-    private string adVideo = "video";
-    private string adBanner = "LevelComplete";
-    private string rewardVid = "rewardedVideo";
-    private int nextScene;
-    
+    public bool startGame = false; 
+      
     private Scene myScenes;
     string scene;
     int sceneToLoad;
     void Start()
-    {
-        // Monetization.Initialize(storeId, true);
-        //ShowVideoAd();
+    {      
         Levels.myLevel = this;
-    }
-    /*
-    public void ShowVideoAd()
-    {
-        if (Monetization.IsReady(adVideo))
-        {
-            ShowAdPlacementContent ad = null;
-            ad = Monetization.GetPlacementContent(adVideo) as ShowAdPlacementContent;
-            if (ad != null)
-            {
-                ad.Show();
-            }
-        }
-    }
-
-    public void ShowBannerAd()
-    {
-        if (Monetization.IsReady(adBanner))
-        {
-            ShowAdPlacementContent ad = null;
-            ad = Monetization.GetPlacementContent(adBanner) as ShowAdPlacementContent;
-            if (ad != null)
-            {
-                ad.Show();
-            }
-        }
-    }
-    */
+    }  
     public void ConfiButton()
     {
         Time.timeScale = 0;
-
         backgroundConfigImage.SetActive(true);
-        exitButton.SetActive(true);
-                     
+        exitButton.SetActive(true);                  
     }
     public void ExitGame()
     {
         Application.Quit();
-        Debug.Log("saiu");
+        Debug.Log("exit");
     }
 
     public void StartGame()
@@ -80,6 +42,7 @@ public class Levels : MonoBehaviour {
     public void LastScene()
     {
         //Menu Button "Play"
+        //If the player has already played and left, loads the scene in which he left. If the player never played loads the first scene
         sceneToLoad = PlayerPrefs.GetInt("SavedScene");
         if (sceneToLoad == 0)
             SceneManager.LoadScene("Level1");
@@ -88,10 +51,12 @@ public class Levels : MonoBehaviour {
     }
     public void NextScene()
     {
+        //Load the next scene in the build settings. 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void ReloadScene()
     {
+        //Reload the current scene that player was
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     } 
@@ -104,10 +69,10 @@ public class Levels : MonoBehaviour {
     }
     public void FacebookLike()
     {
-        Application.OpenURL("https://www.facebook.com/kaoe.silvaSK8");
+        Application.OpenURL("https://www.facebook.com/gamelandstudio");
     }
     public void RateTheApp()
     {
-        Application.OpenURL("https://www.facebook.com/kaoe.silvaSK8");
+        Application.OpenURL("https://www.facebook.com/gamelandstudio");
     }
 }
