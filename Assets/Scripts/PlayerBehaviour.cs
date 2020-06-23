@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour {
 
-    public GameObject explosion;
-    float speed = 5.0f;
-    float speedBol = 2.5f;
-    public Rigidbody myBody;
-    public float radius = 5.0F;
-    public float power = 700.0F;
-    public bool isAtive = false;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private Rigidbody myBody;
+
+    private float speed = 5.0f;
+    private float speedBol = 2.5f;    
+    private float radius = 5.0F;
+    private float power = 700.0F;
+    private bool isAtive = false;
 
     void Update()
     {
@@ -26,9 +27,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             isAtive = true;                      
-            gameObject.SetActive(false);    
-            Debug.Log("colidiu");
-            
+            gameObject.SetActive(false);                        
         }     
     }
 
@@ -40,11 +39,9 @@ public class PlayerBehaviour : MonoBehaviour {
             Rigidbody rb = proximo.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.AddExplosionForce(power, transform.position, radius);
-                Debug.Log("EXPLODIU");         
+                rb.AddExplosionForce(power, transform.position, radius);                   
             }
         }
-
     }
 
     private void Load()
@@ -54,8 +51,6 @@ public class PlayerBehaviour : MonoBehaviour {
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadSceneAsync("SampleScene");
-        Debug.Log("fodase");
-            
+        SceneManager.LoadSceneAsync("SampleScene");          
     }
 }
