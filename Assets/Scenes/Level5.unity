@@ -1715,6 +1715,46 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -273.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -389.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 224251191135230282, guid: 6943457230e649941bfc324cb82b62a3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 194.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6943457230e649941bfc324cb82b62a3, type: 2}
   m_IsPrefabAsset: 0
@@ -4773,10 +4813,10 @@ RectTransform:
   m_Father: {fileID: 720942206}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5026, y: 300.7}
-  m_SizeDelta: {x: 500.61, y: 230.39}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 5.100006, y: 194.76001}
+  m_SizeDelta: {x: -273.39, y: -389.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919749334
 MonoBehaviour:
@@ -4791,7 +4831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4806,7 +4846,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -8824,6 +8864,8 @@ MonoBehaviour:
   panel: {fileID: 720942205}
   finish: {fileID: 2016200109}
   startPanel: {fileID: 253932257}
+  backgroundConfigImage: {fileID: 0}
+  exitButton: {fileID: 0}
   startGame: 0
 --- !u!4 &1542170309
 Transform:
@@ -11409,6 +11451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c03c917f0f80bd4bb7b263d79ad006a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: 
 --- !u!135 &1997690285
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12014,10 +12057,10 @@ RectTransform:
   m_Father: {fileID: 2016200110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5026, y: 300.7}
-  m_SizeDelta: {x: 500.61, y: 230.39}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 18, y: 194.76001}
+  m_SizeDelta: {x: -273.39, y: -389.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074424638
 MonoBehaviour:
@@ -12032,7 +12075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12047,7 +12090,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
