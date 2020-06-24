@@ -13,8 +13,7 @@ public class PlayerBehaviour : MonoBehaviour {
     private float speedBol = 2.5f;    
     private float radius = 5.0F;
     private float power = 700.0F;
-    private bool isAtive = false;
-
+    
     void Update()
     {
         float move = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
@@ -25,8 +24,7 @@ public class PlayerBehaviour : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
-        {
-            isAtive = true;                      
+        {                   
             gameObject.SetActive(false);                        
         }     
     }
@@ -53,4 +51,5 @@ public class PlayerBehaviour : MonoBehaviour {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadSceneAsync("SampleScene");          
     }
+    
 }

@@ -10,20 +10,12 @@ public class Moviment : MonoBehaviour {
     [SerializeField] private Rigidbody myBody;
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject shaker;
-
-    private Vector2 direction;
-    private Vector3 mousePosition;
+    [SerializeField] private AudioSource winAudio;
+    [SerializeField] private AudioSource boomAudio;
 
     private float speed = 9f;
-    private float speedBol = 3.5f;
     private float ballVelocity = 6.7f;
-    private float velCam;
-    private float ballStrenght;
-
-    public AudioSource winAudio;
-    public AudioSource boomAudio;
-
-    
+   
     private void Start()
     {
         if(winAudio.isPlaying)
@@ -71,9 +63,8 @@ public class Moviment : MonoBehaviour {
             Levels.myLevel.finish.SetActive(true);
             myCamBody.velocity = Vector3.zero;
             Debug.Log("colidiu");          
-        }     
+        }      
     }
- 
     public void Forward()
     {
         myBody.velocity = Vector3.forward * speed;
@@ -88,12 +79,5 @@ public class Moviment : MonoBehaviour {
             Levels.myLevel.startGame = false;
             myCamBody.velocity = Vector3.zero;           
         }
-    }
-
-    IEnumerator Reload()
-    {
-        yield return new WaitForSeconds(1.7f);
-        SceneManager.LoadSceneAsync("SampleScene");
-        Debug.Log("Reload");
     }
 }

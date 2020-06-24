@@ -8,6 +8,7 @@ TagManager:
   - Line
   - pause
   - fire
+  - Objects
   layers:
   - Default
   - TransparentFX
