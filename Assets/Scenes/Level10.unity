@@ -11791,7 +11791,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 07d407efcdfd6e143921732665cca321, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11860,11 +11860,11 @@ MonoBehaviour:
   myCam: {fileID: 534669904}
   myCamBody: {fileID: 534669907}
   myBody: {fileID: 1997690289}
-  explosion: {fileID: 1003653346498418, guid: 5d314c4d168ab6348929f1d6c60a7918, type: 2}
-  Player: {fileID: 1997690283}
+  explosion: {fileID: 1003653346498418, guid: 62ca443518c901146b68711ae3300a75, type: 2}
   shaker: {fileID: 1332861646}
   winAudio: {fileID: 1916675069}
   boomAudio: {fileID: 1930878606}
+  myMesh: {fileID: 1997690286}
 --- !u!1 &2003843092
 GameObject:
   m_ObjectHideFlags: 0

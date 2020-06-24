@@ -9,16 +9,17 @@ public class Moviment : MonoBehaviour {
     [SerializeField] private Rigidbody myCamBody;
     [SerializeField] private Rigidbody myBody;
     [SerializeField] private GameObject explosion;
-    //[SerializeField] private GameObject Player;
     [SerializeField] private GameObject shaker;
     [SerializeField] private AudioSource winAudio;
     [SerializeField] private AudioSource boomAudio;
+    [SerializeField] private MeshRenderer myMesh;
 
     private float speed = 9f;
     private float ballVelocity = 6.7f;
    
     private void Start()
-    {       
+    {
+        myMesh.material.color = explosion.GetComponent<Renderer>().sharedMaterial.color;
         if (winAudio.isPlaying)
             winAudio.Stop();
         if (boomAudio.isPlaying)
@@ -56,10 +57,7 @@ public class Moviment : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
-        {
-            //var main = explosion.GetComponent<ParticleSystem>().main;
-            //main.startColor = Color.black;
-
+        {          
             CameraShaker.Instance.ShakeOnce(16f, 16f, .4f, 4f);      
             Instantiate(explosion, transform.position, transform.rotation).GetComponent<ParticleSystem>().Emit(20000);
             boomAudio.Play();
