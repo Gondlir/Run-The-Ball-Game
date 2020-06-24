@@ -7791,6 +7791,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355386367}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1390240472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1879604202}
+  m_Script: {fileID: 11500000, guid: 2b0dc386ab731144a9e20c584d9d7b3f, type: 3}
 --- !u!1 &1390360967
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,11 +9753,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224658874201731738, guid: fc9e11133dc25da42ad11afee145fdb8,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 224658874201731738, guid: fc9e11133dc25da42ad11afee145fdb8,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -9840,6 +9841,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114624665920584236, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1390240472}
+    - target: {fileID: 114360892472366976, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1390240472}
+    - target: {fileID: 114039114473097302, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1390240472}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9e11133dc25da42ad11afee145fdb8, type: 2}
   m_IsPrefabAsset: 0
@@ -11845,6 +11861,7 @@ MonoBehaviour:
   myCamBody: {fileID: 534669907}
   myBody: {fileID: 1997690289}
   explosion: {fileID: 1003653346498418, guid: 5d314c4d168ab6348929f1d6c60a7918, type: 2}
+  Player: {fileID: 1997690283}
   shaker: {fileID: 1332861646}
   winAudio: {fileID: 1916675069}
   boomAudio: {fileID: 1930878606}
