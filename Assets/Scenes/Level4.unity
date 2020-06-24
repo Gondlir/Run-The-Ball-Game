@@ -4791,6 +4791,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595843442}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &598502701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 424819102}
+  m_Script: {fileID: 11500000, guid: 2b0dc386ab731144a9e20c584d9d7b3f, type: 3}
 --- !u!1 &609894363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,11 +4907,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224658874201731738, guid: fc9e11133dc25da42ad11afee145fdb8,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224658874201731738, guid: fc9e11133dc25da42ad11afee145fdb8,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4994,6 +4995,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114039114473097302, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 598502701}
+    - target: {fileID: 114360892472366976, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 598502701}
+    - target: {fileID: 114624665920584236, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 598502701}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9e11133dc25da42ad11afee145fdb8, type: 2}
   m_IsPrefabAsset: 0
@@ -14394,6 +14410,7 @@ MonoBehaviour:
   shaker: {fileID: 1332861646}
   winAudio: {fileID: 1916675069}
   boomAudio: {fileID: 1930878606}
+  myMesh: {fileID: 1997690286}
 --- !u!1 &2003843092
 GameObject:
   m_ObjectHideFlags: 0
