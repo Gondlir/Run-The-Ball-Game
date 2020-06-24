@@ -7,10 +7,9 @@ using System.IO;
 public class Levels : MonoBehaviour {
 
     public static Levels myLevel;
-    public GameObject panel;
-    public GameObject finish;
+    public GameObject nextPanel;
+    public GameObject deadPanel;
     public GameObject startPanel;
-    public GameObject backgroundConfigImage;
     public GameObject exitButton;
 
     public bool startGame = false; 
@@ -25,7 +24,6 @@ public class Levels : MonoBehaviour {
     public void ConfiButton()
     {
         Time.timeScale = 0;
-        backgroundConfigImage.SetActive(true);
         exitButton.SetActive(true);                  
     }
     public void ExitGame()
@@ -53,7 +51,7 @@ public class Levels : MonoBehaviour {
     {
         //Load the next scene in the build settings. 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        finish.SetActive(false);
+        deadPanel.SetActive(false);
     }
     public void ReloadScene()
     {

@@ -60,7 +60,7 @@ public class Moviment : MonoBehaviour {
             Instantiate(explosion, transform.position, transform.rotation).GetComponent<ParticleSystem>().Emit(20000);
             boomAudio.Play();
             gameObject.SetActive(false);
-            Levels.myLevel.finish.SetActive(true);
+            Levels.myLevel.deadPanel.SetActive(true);
             myCamBody.velocity = Vector3.zero;
             Debug.Log("colidiu");          
         }      
@@ -75,7 +75,7 @@ public class Moviment : MonoBehaviour {
         if (other.gameObject.tag == "Line")
         {
             winAudio.Play();
-            Levels.myLevel.panel.SetActive(true);
+            Levels.myLevel.nextPanel.SetActive(true);
             Levels.myLevel.startGame = false;
             myCamBody.velocity = Vector3.zero;
             myBody.isKinematic = true;

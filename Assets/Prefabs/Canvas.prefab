@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 222764771185669648}
   - component: {fileID: 114414685381511064}
   m_Layer: 5
-  m_Name: Faleceu
+  m_Name: Dead Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1052,8 +1052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 194.81}
-  m_SizeDelta: {x: -273.39, y: -389.61}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0.0049438477}
+  m_SizeDelta: {x: 0, y: 0.010071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224255179364454712
 RectTransform:
@@ -1145,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.100006, y: 194.64001}
-  m_SizeDelta: {x: -273.39, y: -389.61}
+  m_AnchoredPosition: {x: -0.0010070801, y: -0.079956055}
+  m_SizeDelta: {x: -0, y: -0.16003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224513141383414082
 RectTransform:
@@ -1222,8 +1222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.100006, y: 194.64001}
-  m_SizeDelta: {x: -273.39, y: -389.61}
+  m_AnchoredPosition: {x: -0.0010070801, y: -0.080078125}
+  m_SizeDelta: {x: -0, y: -0.16003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224784724984616702
 RectTransform:
