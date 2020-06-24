@@ -18,7 +18,7 @@ public class Moviment : MonoBehaviour {
    
     private void Start()
     {
-        if(winAudio.isPlaying)
+        if (winAudio.isPlaying)
             winAudio.Stop();
         if (boomAudio.isPlaying)
             boomAudio.Stop();      
@@ -77,7 +77,8 @@ public class Moviment : MonoBehaviour {
             winAudio.Play();
             Levels.myLevel.panel.SetActive(true);
             Levels.myLevel.startGame = false;
-            myCamBody.velocity = Vector3.zero;           
+            myCamBody.velocity = Vector3.zero;
+            myBody.isKinematic = true;
         }
     }
 }

@@ -17323,7 +17323,6 @@ MonoBehaviour:
   shaker: {fileID: 1332861646}
   winAudio: {fileID: 1916675069}
   boomAudio: {fileID: 1930878606}
-  touchEnemySound: {fileID: 81280420}
 --- !u!1 &2003843092
 GameObject:
   m_ObjectHideFlags: 0

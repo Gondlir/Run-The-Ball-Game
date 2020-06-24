@@ -53,6 +53,7 @@ public class Levels : MonoBehaviour {
     {
         //Load the next scene in the build settings. 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        finish.SetActive(false);
     }
     public void ReloadScene()
     {
