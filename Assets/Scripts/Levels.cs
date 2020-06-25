@@ -19,8 +19,9 @@ public class Levels : MonoBehaviour {
     public int sceneToLoad;
     void Start()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         Levels.myLevel = this;
+        startGame = true;
     }  
     public void ConfiButton()
     {
@@ -35,8 +36,8 @@ public class Levels : MonoBehaviour {
 
     public void StartGame()
     {
-        Time.timeScale = 1;
-        startGame = true;
+        //Time.timeScale = 1;
+        //startGame = true;
         startPanel.SetActive(false);
     }   
     public void LastScene()
