@@ -10,9 +10,11 @@ public class SavePlayerCurrentScene : MonoBehaviour {
 
     public string scene;
     public Scene myCurrentScene;
-
+    public int myScene;
+    public static SavePlayerCurrentScene instance;
     private void Start()
-    {                
+    {
+        //instance = this;
         Debug.Log("beggin in: " + myCurrentScene.name);       
     }
     
@@ -26,7 +28,7 @@ public class SavePlayerCurrentScene : MonoBehaviour {
     private void OnApplicationQuit()
     {
         //In Unity Editor
-        int myScene = SceneManager.GetActiveScene().buildIndex;
+        myScene = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("Scene when exit: " + myScene);     
         PlayerPrefs.SetInt("SavedScene", myScene);                        
     }
@@ -34,7 +36,7 @@ public class SavePlayerCurrentScene : MonoBehaviour {
     private void OnApplicationPause()
     {
         //In Android
-        int myScene = SceneManager.GetActiveScene().buildIndex;
+        myScene = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("Scene when exit: " + myScene);      
         PlayerPrefs.SetInt("SavedScene", myScene);
     }

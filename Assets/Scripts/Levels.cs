@@ -11,12 +11,12 @@ public class Levels : MonoBehaviour {
     public GameObject deadPanel;
     public GameObject startPanel;
     public GameObject exitButton;
-
+    public Slider sliderLoader;
     public bool startGame = false; 
       
     private Scene myScenes;
     string scene;
-    int sceneToLoad;
+    public int sceneToLoad;
     void Start()
     {
         Time.timeScale = 0;
@@ -45,9 +45,14 @@ public class Levels : MonoBehaviour {
         //If the player has already played and left, loads the scene in which he left. If the player never played loads the first scene
         sceneToLoad = PlayerPrefs.GetInt("SavedScene");
         if (sceneToLoad == 0)
-            SceneManager.LoadScene("Level1");
-        else if (sceneToLoad != 0)
-            SceneManager.LoadScene(sceneToLoad);             
+        {
+            SceneManager.LoadScene("Level1");      
+        }
+        else if (sceneToLoad != 0) 
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+                       
     }
     public void NextScene()
     {
@@ -67,7 +72,7 @@ public class Levels : MonoBehaviour {
         yield return new WaitForSeconds(1.7f);
         SceneManager.LoadSceneAsync("SampleScene");
         Debug.Log("Reload");
-    }
+    } 
     public void FacebookLike()
     {
         Application.OpenURL("https://www.facebook.com/gamelandstudio");
