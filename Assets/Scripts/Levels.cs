@@ -18,7 +18,8 @@ public class Levels : MonoBehaviour {
     string scene;
     int sceneToLoad;
     void Start()
-    {      
+    {
+        Time.timeScale = 0;
         Levels.myLevel = this;
     }  
     public void ConfiButton()
@@ -34,6 +35,7 @@ public class Levels : MonoBehaviour {
 
     public void StartGame()
     {
+        Time.timeScale = 1;
         startGame = true;
         startPanel.SetActive(false);
     }   
@@ -56,6 +58,8 @@ public class Levels : MonoBehaviour {
     public void ReloadScene()
     {
         //Reload the current scene that player was
+        startPanel.SetActive(false);
+        Time.timeScale = 1;
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     } 
