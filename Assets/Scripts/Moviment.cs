@@ -14,11 +14,16 @@ public class Moviment : MonoBehaviour {
     [SerializeField] private AudioSource boomAudio;
     [SerializeField] private MeshRenderer myMesh;
 
+    public int myLifes { get; set; } //Contar quantas vidas o player perdeu[morreu]
+    public int myPontuation { get; set; } //Contar quanto de moedas ele adquiriu 
+    public static Moviment instance;
     private float speed = 9f;
     private float ballVelocity = 6.7f;
-   
+    
+   //Fazer checagem que... SE o Player já morreu naquela fase ele não precisa dar GO de novo e tambem mostrar as moedas na tela de inicialização do canvas
     private void Start()
     {
+        instance = this;
         myMesh.material.color = explosion.GetComponent<Renderer>().sharedMaterial.color;
         if (winAudio.isPlaying)
             winAudio.Stop();

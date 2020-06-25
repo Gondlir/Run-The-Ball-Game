@@ -6,17 +6,15 @@ using UnityEngine.UI;
 using System.IO;
 public class Levels : MonoBehaviour {
 
-    public static Levels myLevel;
-    public GameObject nextPanel;
+
     public GameObject deadPanel;
     public GameObject startPanel;
     public GameObject exitButton;
-    public Slider sliderLoader;
-    public bool startGame = false; 
-      
-    private Scene myScenes;
-    string scene;
-    public int sceneToLoad;
+    public GameObject nextPanel;
+    public static Levels myLevel;
+    public bool startGame { get; set; }
+    public int sceneToLoad { get; set; }
+
     void Start()
     {
         Time.timeScale = 0;

@@ -260,11 +260,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
         type: 2}
-      propertyPath: nextPanel
-      value: 
-      objectReference: {fileID: 720942205}
-    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
-        type: 2}
       propertyPath: deadPanel
       value: 
       objectReference: {fileID: 2016200109}
@@ -278,6 +273,11 @@ Prefab:
       propertyPath: exitButton
       value: 
       objectReference: {fileID: 24767719}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
+      propertyPath: nextPanel
+      value: 
+      objectReference: {fileID: 720942205}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42304012bdf19ea428958ffb402278d0, type: 2}
   m_IsPrefabAsset: 0
@@ -17494,8 +17494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c03c917f0f80bd4bb7b263d79ad006a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
-  myScene: 0
 --- !u!135 &1997690285
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -51,8 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0dc386ab731144a9e20c584d9d7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextPanel: {fileID: 0}
   deadPanel: {fileID: 0}
   startPanel: {fileID: 0}
   exitButton: {fileID: 0}
-  startGame: 0
+  nextPanel: {fileID: 0}

@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
-    public AudioSource audioBackground;
-    public Image imgOn;
-    public Image imgOff;
-    public Slider sliderLoader;
+    [SerializeField] private AudioSource audioBackground;
+    [SerializeField] private Image imgOn;
+    [SerializeField] private Image imgOff;
+    [SerializeField] private Slider sliderLoader;
+
+    public int sceneToLoad { get; set; }
     public static Manager instance;
-    int sceneToLoad;
+    
     void Start() 
     {
         LastScene();

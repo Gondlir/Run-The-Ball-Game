@@ -8,9 +8,10 @@ using System;
 
 public class SavePlayerCurrentScene : MonoBehaviour {
 
-    public string scene;
+    public string scene { get; set; }
     public Scene myCurrentScene;
-    public int myScene;
+    public int myScene { get; set; }
+
     public static SavePlayerCurrentScene instance;
     private void Start()
     {
