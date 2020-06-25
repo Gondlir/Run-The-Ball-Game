@@ -57,9 +57,7 @@ public class Levels : MonoBehaviour {
     }
     public void ReloadScene()
     {
-        //Reload the current scene that player was
-        startPanel.SetActive(false);
-        Time.timeScale = 1;
+        //Reload the current scene that player was       
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     } 
