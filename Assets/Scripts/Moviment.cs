@@ -27,8 +27,8 @@ public class Moviment : MonoBehaviour {
     }
     void Update ()
     {
-       //if (!Levels.myLevel.startGame)
-            //return;       
+       if (!Levels.myLevel.startGame)
+            return;       
     }
     private void FixedUpdate()
     {
