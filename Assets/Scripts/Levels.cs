@@ -18,6 +18,7 @@ public class Levels : MonoBehaviour {
     void Start()
     {
         //Time.timeScale = 0;
+        StartCoroutine(AwaitTransitionBegin());
         Levels.myLevel = this;
         startGame = true;
     }  
@@ -66,11 +67,10 @@ public class Levels : MonoBehaviour {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     } 
     
-   public IEnumerator Reload ()
+   public IEnumerator AwaitTransitionBegin()
     {
-        yield return new WaitForSeconds(1.7f);
-        SceneManager.LoadSceneAsync("SampleScene");
-        Debug.Log("Reload");
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0;
     } 
     public void FacebookLike()
     {
