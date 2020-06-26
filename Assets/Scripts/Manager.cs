@@ -6,33 +6,30 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
-    [SerializeField] private AudioSource audioBackground;
-    [SerializeField] private Image imgOn;
-    [SerializeField] private Image imgOff;
     [SerializeField] private Slider sliderLoader;
-
+    [SerializeField] private Animator transitionAnimator;
+    [SerializeField] private GameObject startPanel;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject sliderGameObject;
     public int sceneToLoad { get; set; }
     public static Manager instance;
-    
+
+    void Awake() 
+    {
+        sliderGameObject.SetActive(true);
+        mainMenuPanel.SetActive(true);
+        startPanel.SetActive(false);
+    }
     void Start() 
     {
-        LastScene();
+        //LastScene();
+        //transitionAnimator.Play("CrossfadeEnd");
+        transitionAnimator.SetTrigger("Start");
     }
-    public void Stop()
+
+    public void LoadSceneFodase() 
     {
-        if (audioBackground.isPlaying)
-        {
-            audioBackground.Pause();
-            imgOn.enabled = false;
-            imgOff.enabled = true;
-            
-        }
-        else
-        {
-            audioBackground.Play();
-            imgOn.enabled = true;
-            imgOff.enabled = false;
-        }      
+        StartCoroutine(TransitionScenes(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void LastScene()
@@ -40,25 +37,34 @@ public class Manager : MonoBehaviour {
         sceneToLoad = PlayerPrefs.GetInt("SavedScene");
         if (sceneToLoad == 0)
         {
-            SceneManager.LoadSceneAsync("Level1");
+            //SceneManager.LoadSceneAsync("Level1");
+            StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));           
         }
         else if (sceneToLoad != 0)
         {
             //SceneManager.LoadScene(sceneToLoad);
+            //StartCoroutine(TransitionScenes(sceneToLoad));
             StartCoroutine(LoadAsync(sceneToLoad));
         }
     }       
-        public IEnumerator LoadAsync(int sceneIndex) 
-        {
-            AsyncOperation operatoin = SceneManager.LoadSceneAsync(sceneIndex);
-            operatoin.allowSceneActivation = false;
-            while (!operatoin.isDone) 
-            {
+    public IEnumerator LoadAsync(int sceneIndex) 
+    {
+         AsyncOperation operatoin = SceneManager.LoadSceneAsync(sceneIndex);
+         operatoin.allowSceneActivation = false;
+         while (!operatoin.isDone) 
+         {
                 float progress = Mathf.Clamp01(operatoin.progress / .9f);         
                 sliderLoader.value = progress;
                 operatoin.allowSceneActivation = true;
+                transitionAnimator.SetTrigger("Start");
                 yield return null;
-            }
-        }
-        
+         }
     }
+    public IEnumerator TransitionScenes(int sceneIndex) 
+    {
+        Debug.Log("Cororu");
+        transitionAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneIndex);
+    }   
+}

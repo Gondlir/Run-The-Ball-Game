@@ -17,7 +17,7 @@ public class Levels : MonoBehaviour {
 
     void Start()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         Levels.myLevel = this;
         startGame = true;
     }  
