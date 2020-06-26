@@ -22,14 +22,9 @@ public class Manager : MonoBehaviour {
     }
     void Start() 
     {
-        //LastScene();
+        StartCoroutine(Await());
         //transitionAnimator.Play("CrossfadeEnd");
         transitionAnimator.SetTrigger("Start");
-    }
-
-    public void LoadSceneFodase() 
-    {
-        StartCoroutine(TransitionScenes(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void LastScene()
@@ -60,11 +55,9 @@ public class Manager : MonoBehaviour {
                 yield return null;
          }
     }
-    public IEnumerator TransitionScenes(int sceneIndex) 
+    public IEnumerator Await() 
     {
-        Debug.Log("Cororu");
-        transitionAnimator.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneIndex);
-    }   
+        yield return new WaitForSeconds(3f);
+        LastScene();
+    }
 }
