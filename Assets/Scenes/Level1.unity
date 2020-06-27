@@ -260,6 +260,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
         type: 2}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 1997690288}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
+      propertyPath: endLinePosition
+      value: 
+      objectReference: {fileID: 1800034937}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
+      propertyPath: sliderPlayerProgress
+      value: 
+      objectReference: {fileID: 1132949469}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
       propertyPath: levelStartPanel
       value: 
       objectReference: {fileID: 1172302797}
@@ -9619,6 +9634,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1130135763}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1132949469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114638322211002428, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172302795}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1133188381
 GameObject:
   m_ObjectHideFlags: 0
@@ -18726,7 +18747,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120289913}
-  m_LocalRotation: {x: 0.099643946, y: 0.1444615, z: -0.01462325, w: 0.98437196}
+  m_LocalRotation: {x: 0.099643946, y: 0.1444615, z: -0.014623259, w: 0.98437196}
   m_LocalPosition: {x: -1.91, y: 3.71, z: 6.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

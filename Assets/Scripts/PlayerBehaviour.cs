@@ -62,7 +62,7 @@ public class PlayerBehaviour : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
-        {          
+        {       
             CameraShaker.Instance.ShakeOnce(16f, 16f, .4f, 4f);      
             Instantiate(explosion, transform.position, transform.rotation).GetComponent<ParticleSystem>().Emit(20000);
             boomAudio.Play();

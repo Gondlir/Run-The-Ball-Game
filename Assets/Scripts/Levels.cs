@@ -6,7 +6,9 @@ using UnityEngine.UI;
 using System.IO;
 using Cinemachine;
 public class Levels : MonoBehaviour {
-
+    [SerializeField] private Transform playerPosition;
+    [SerializeField] private Transform endLinePosition;
+    [SerializeField] private Slider sliderPlayerProgress;
     [SerializeField] private GameObject levelStartPanel;
     [SerializeField] private GameObject coinStartPanel;
     [SerializeField] private Animator transitionAnimator;
@@ -20,15 +22,34 @@ public class Levels : MonoBehaviour {
     
     public bool startGame { get; set; }
     public int sceneToLoad { get; set; }
-
+    private float maxDistance;
     void Start()
     {
         //Time.timeScale = 0;
         transitionAnimator.SetTrigger("FingerAnim");
         StartCoroutine(AwaitTransitionBegin());      
         Levels.myLevel = this;
+        maxDistance = DistanceProgress();
         //startGame = true;
-    }  
+    }
+
+    void Update() 
+    {
+        if (playerPosition.position.z <= maxDistance && playerPosition.position.z <= endLinePosition.position.z)
+        {
+            float distance = 1 - (DistanceProgress() / maxDistance);
+            SetPlayerProgress(distance);
+        }
+    }
+    float DistanceProgress()
+    {
+        return Vector3.Distance(playerPosition.position, endLinePosition.position);
+    }
+
+    void SetPlayerProgress(float progress)
+    {
+        sliderPlayerProgress.value = progress;
+    }
     public void ConfiButton()
     {
         Time.timeScale = 0;
@@ -73,7 +94,7 @@ public class Levels : MonoBehaviour {
     }
     public void ReloadScene()
     {
-        //Reload the current scene that player was       
+        //Reload the current scene that player was
         currentStatusLevelAndCoinProgressPanel.SetActive(true);
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
@@ -81,7 +102,7 @@ public class Levels : MonoBehaviour {
     
    public IEnumerator AwaitTransitionBegin()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.9f);
         Time.timeScale = 0;
     } 
     public void FacebookLike()

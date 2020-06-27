@@ -51,6 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0dc386ab731144a9e20c584d9d7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPosition: {fileID: 0}
+  endLinePosition: {fileID: 0}
+  sliderPlayerProgress: {fileID: 0}
   levelStartPanel: {fileID: 0}
   coinStartPanel: {fileID: 0}
   transitionAnimator: {fileID: 0}
