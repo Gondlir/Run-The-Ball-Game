@@ -260,6 +260,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
         type: 2}
+      propertyPath: levelStartPanel
+      value: 
+      objectReference: {fileID: 1172302797}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
+      propertyPath: coinStartPanel
+      value: 
+      objectReference: {fileID: 1172302796}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
+      propertyPath: currentStatusLevelAndCoinProgressPanel
+      value: 
+      objectReference: {fileID: 466828718}
+    - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
+        type: 2}
       propertyPath: deadPanel
       value: 
       objectReference: {fileID: 2016200109}
@@ -3952,6 +3967,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457171917}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &466828718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1203546371831416, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172302795}
 --- !u!1 &489849546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10320,6 +10340,16 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9e11133dc25da42ad11afee145fdb8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1172302796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1492157332672592, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172302795}
+--- !u!1 &1172302797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1007476836324050, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172302795}
 --- !u!1 &1209682125
 GameObject:
   m_ObjectHideFlags: 0

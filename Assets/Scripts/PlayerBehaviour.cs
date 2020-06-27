@@ -68,6 +68,7 @@ public class PlayerBehaviour : MonoBehaviour {
             boomAudio.Play();
             gameObject.SetActive(false);
             Levels.myLevel.deadPanel.SetActive(true);
+            Levels.myLevel.currentStatusLevelAndCoinProgressPanel.SetActive(false);
             myCamBody.velocity = Vector3.zero;
             Debug.Log("colidiu");          
         }      
@@ -83,6 +84,7 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             winAudio.Play();
             Levels.myLevel.nextPanel.SetActive(true);
+            Levels.myLevel.currentStatusLevelAndCoinProgressPanel.SetActive(false);
             Levels.myLevel.startGame = false;
             myCamBody.velocity = Vector3.zero;
             myBody.isKinematic = true;

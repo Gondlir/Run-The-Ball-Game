@@ -6,12 +6,16 @@ using UnityEngine.UI;
 using System.IO;
 public class Levels : MonoBehaviour {
 
+    [SerializeField] private GameObject levelStartPanel;
+    [SerializeField] private GameObject coinStartPanel;
 
+    public GameObject currentStatusLevelAndCoinProgressPanel;
     public GameObject deadPanel;
     public GameObject startPanel;
     public GameObject exitButton;
     public GameObject nextPanel;
     public static Levels myLevel;
+    
     public bool startGame { get; set; }
     public int sceneToLoad { get; set; }
 
@@ -38,6 +42,9 @@ public class Levels : MonoBehaviour {
         Time.timeScale = 1;
         startGame = true;
         startPanel.SetActive(false);
+        levelStartPanel.SetActive(false);
+        coinStartPanel.SetActive(false);
+        currentStatusLevelAndCoinProgressPanel.SetActive(true);
     }   
     public void LastScene()
     {
@@ -56,13 +63,15 @@ public class Levels : MonoBehaviour {
     }
     public void NextScene()
     {
-        //Load the next scene in the build settings. 
+        //Load the next scene in the build settings.  
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         deadPanel.SetActive(false);
+        currentStatusLevelAndCoinProgressPanel.SetActive(true);
     }
     public void ReloadScene()
     {
         //Reload the current scene that player was       
+        currentStatusLevelAndCoinProgressPanel.SetActive(true);
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     } 
