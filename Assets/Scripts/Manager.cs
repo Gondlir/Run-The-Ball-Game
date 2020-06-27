@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour {
     [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject sliderGameObject;
+    [SerializeField] private GameObject fingerPointObject;
     public int sceneToLoad { get; set; }
     public static Manager instance;
 
@@ -19,6 +20,7 @@ public class Manager : MonoBehaviour {
         sliderGameObject.SetActive(true);
         mainMenuPanel.SetActive(true);
         startPanel.SetActive(false);
+        fingerPointObject.SetActive(false);
     }
     void Start() 
     {

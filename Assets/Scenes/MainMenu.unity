@@ -183,6 +183,11 @@ Prefab:
       propertyPath: sliderGameObject
       value: 
       objectReference: {fileID: 1050306163}
+    - target: {fileID: 114629249040474238, guid: ab67da1f9a3687a4296146b590326207,
+        type: 2}
+      propertyPath: fingerPointObject
+      value: 
+      objectReference: {fileID: 1286776296}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab67da1f9a3687a4296146b590326207, type: 2}
   m_IsPrefabAsset: 0
@@ -317,6 +322,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9e11133dc25da42ad11afee145fdb8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1286776296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1312407576629858, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1286776295}
 --- !u!1 &1696933408
 GameObject:
   m_ObjectHideFlags: 0
