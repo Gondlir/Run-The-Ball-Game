@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using Cinemachine;
 public class Levels : MonoBehaviour {
 
     [SerializeField] private GameObject levelStartPanel;
     [SerializeField] private GameObject coinStartPanel;
+    [SerializeField] private Animator transitionAnimator;
 
     public GameObject currentStatusLevelAndCoinProgressPanel;
     public GameObject deadPanel;
@@ -22,9 +24,10 @@ public class Levels : MonoBehaviour {
     void Start()
     {
         //Time.timeScale = 0;
-        StartCoroutine(AwaitTransitionBegin());
+        transitionAnimator.SetTrigger("FingerAnim");
+        StartCoroutine(AwaitTransitionBegin());      
         Levels.myLevel = this;
-        startGame = true;
+        //startGame = true;
     }  
     public void ConfiButton()
     {
@@ -39,7 +42,7 @@ public class Levels : MonoBehaviour {
 
     public void StartGame()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1;      
         startGame = true;
         startPanel.SetActive(false);
         levelStartPanel.SetActive(false);

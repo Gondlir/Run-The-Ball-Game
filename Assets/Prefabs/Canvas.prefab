@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 224533613744317614}
   - component: {fileID: 222062257211125332}
   - component: {fileID: 114270847028706630}
+  - component: {fileID: 111302329754046138}
   m_Layer: 5
   m_Name: Finger Image
   m_TagString: Untagged
@@ -696,13 +697,27 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7ee17aeee2c165b4d806fcf25240c27f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111302329754046138
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312407576629858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a10578eb723d4374ab5469abecb7c1b1, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114001129862326250
 MonoBehaviour:
   m_ObjectHideFlags: 1
