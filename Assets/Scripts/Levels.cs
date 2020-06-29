@@ -26,7 +26,7 @@ public class Levels : MonoBehaviour {
     void Start()
     {
         //Time.timeScale = 0;
-        transitionAnimator.SetTrigger("FingerAnim");
+        //transitionAnimator.SetTrigger("FingerAnim");
         StartCoroutine(AwaitTransitionBegin());      
         Levels.myLevel = this;
         maxDistance = DistanceProgress();
@@ -49,12 +49,7 @@ public class Levels : MonoBehaviour {
     void SetPlayerProgress(float progress)
     {
         sliderPlayerProgress.value = progress;
-    }
-    public void ConfiButton()
-    {
-        Time.timeScale = 0;
-        exitButton.SetActive(true);                  
-    }
+    }   
     public void ExitGame()
     {
         Application.Quit();
@@ -102,7 +97,7 @@ public class Levels : MonoBehaviour {
     
    public IEnumerator AwaitTransitionBegin()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 0;
     } 
     public void FacebookLike()

@@ -287,7 +287,7 @@ Prefab:
         type: 2}
       propertyPath: transitionAnimator
       value: 
-      objectReference: {fileID: 1370177996}
+      objectReference: {fileID: 253932261}
     - target: {fileID: 114125287051253966, guid: 42304012bdf19ea428958ffb402278d0,
         type: 2}
       propertyPath: currentStatusLevelAndCoinProgressPanel
@@ -2566,6 +2566,11 @@ MeshFilter:
 --- !u!1 &253932257 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1233169967423106, guid: fc9e11133dc25da42ad11afee145fdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172302795}
+--- !u!95 &253932261 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95479419954593006, guid: fc9e11133dc25da42ad11afee145fdb8,
     type: 2}
   m_PrefabInternal: {fileID: 1172302795}
 --- !u!1 &262346491
@@ -10295,12 +10300,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114690044531805204, guid: fc9e11133dc25da42ad11afee145fdb8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1542170308}
-    - target: {fileID: 114039114473097302, guid: fc9e11133dc25da42ad11afee145fdb8,
+    - target: {fileID: 114624665920584236, guid: fc9e11133dc25da42ad11afee145fdb8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10310,7 +10310,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1542170308}
-    - target: {fileID: 114624665920584236, guid: fc9e11133dc25da42ad11afee145fdb8,
+    - target: {fileID: 114039114473097302, guid: fc9e11133dc25da42ad11afee145fdb8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1542170308}
+    - target: {fileID: 114690044531805204, guid: fc9e11133dc25da42ad11afee145fdb8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11948,11 +11953,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364931071}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &1370177996 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95829600764444334, guid: fc9e11133dc25da42ad11afee145fdb8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1172302795}
 --- !u!1 &1374140005
 GameObject:
   m_ObjectHideFlags: 0
