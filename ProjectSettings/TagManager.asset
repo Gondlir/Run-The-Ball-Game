@@ -9,6 +9,7 @@ TagManager:
   - pause
   - fire
   - Objects
+  - Coin
   layers:
   - Default
   - TransparentFX
