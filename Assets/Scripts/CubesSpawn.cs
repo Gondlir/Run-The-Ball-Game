@@ -6,10 +6,10 @@ using UnityEngine;
 public class CubesSpawn : MonoBehaviour
 {
 	[SerializeField] private GameObject[] cubesToSpawn;
-	public int numbersToSpawnTheObjects = 25;
+	public int numbersToSpawnTheObjects;
 	public int linePositionX; // posição da grid no plano X
 	public int linePositionZ; // posição da grid no plano Z
-	public float cubesPositionOffSet = 1f; // distancia dos cubos
+	public float cubesPositionOffSet; // distancia dos cubos
 	public Vector3 originPosition = Vector3.zero;
 
 	void Start()
@@ -22,7 +22,9 @@ public class CubesSpawn : MonoBehaviour
 
 	void SpawnCubes()
 	{
-		originPosition.z = Random.Range(20, 400);
+		originPosition.x = Random.Range(-7.5f, 10.50f);
+		originPosition.z = Random.Range(30, 400);
+		
 		linePositionX = Random.Range(0, 8);
 		linePositionZ = Random.Range(0, 6);
 
