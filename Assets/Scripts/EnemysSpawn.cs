@@ -5,12 +5,12 @@ using UnityEngine;
 public sealed class EnemysSpawn : MonoBehaviour {
 
 	[SerializeField] private GameObject[] enemysToSpawn;
-	public int linePositionX; // posição da grid no plano X
-	public int linePositionZ; // posição da grid no plano Z
+	public int linePositionX = 0; // posição da grid no plano X
+	public int linePositionZ = 0; // posição da grid no plano Z
 	public float cubesPositionOffSet = 1f; // distancia dos cubos
 	public Vector3 originPosition = Vector3.zero;
 	public Vector3 randonPosition;
-
+	
 	void Start () 
 	{
 		SpawnEnemies();
@@ -18,9 +18,9 @@ public sealed class EnemysSpawn : MonoBehaviour {
 	void SpawnEnemies()
 	{
 		originPosition.z = Random.Range(25, 100);
-		linePositionX = Random.Range(1, 6);
-		linePositionZ = Random.Range(1,5);
-
+		linePositionX = Random.Range(0, 10);
+		linePositionZ = Random.Range(0,7);
+                
 		for (int i = 0; i < linePositionX; i++)
 		{
 			for (int j = 0; j < linePositionZ; j++)
@@ -28,7 +28,7 @@ public sealed class EnemysSpawn : MonoBehaviour {
 				Vector3 spawnPositi = new Vector3(i * cubesPositionOffSet, 0, j * cubesPositionOffSet) + originPosition;
 				SpawnEnemy(spawnPositi, Quaternion.identity);
 			}
-		}
+		}						
 	}
 	Vector3 RandonPositions(Vector3 position) 
 	{

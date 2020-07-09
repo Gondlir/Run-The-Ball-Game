@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23319021925825738}
   - component: {fileID: 65170895235396112}
   - component: {fileID: 54643140304444156}
+  - component: {fileID: 114187456990452056}
+  - component: {fileID: 114905414398267308}
   m_Layer: 0
   m_Name: CubeSpawn
   m_TagString: Objects
@@ -112,3 +114,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114187456990452056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491916374847018}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfa88745058dcd4797a33a70200b2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCube: {fileID: 0}
+  myColor:
+    serializedVersion: 2
+    rgba: 0
+--- !u!114 &114905414398267308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491916374847018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88143b8fe319a742bd6a43830755f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 23319021925825738}

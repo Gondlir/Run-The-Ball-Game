@@ -535,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 527436010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.14024562, y: 14.339642, z: 87.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2.2890766}
   m_Children:
   - {fileID: 651279730}
   - {fileID: 2129532698}
@@ -965,7 +965,7 @@ Transform:
   m_GameObject: {fileID: 921875489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 150.7}
-  m_LocalScale: {x: 2.0148, y: 1, z: 28.243856}
+  m_LocalScale: {x: 2.0148, y: 1, z: 60.037994}
   m_Children: []
   m_Father: {fileID: 76200872}
   m_RootOrder: 1
@@ -1365,6 +1365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubesToSpawn:
   - {fileID: 1491916374847018, guid: 07946a1965cd1eb4db636b5c5b2fc452, type: 2}
+  numbersToSpawnTheObjects: 25
   linePositionX: 9
   linePositionZ: 6
   cubesPositionOffSet: 2
@@ -1568,7 +1569,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800034933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4974234, y: 2.35, z: 176.9}
+  m_LocalPosition: {x: 2.4974234, y: 2.35, z: 419.5}
   m_LocalScale: {x: 22.50372, y: 6.805362, z: 1}
   m_Children:
   - {fileID: 1072466275}
