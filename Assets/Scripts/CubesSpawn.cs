@@ -6,21 +6,26 @@ using UnityEngine;
 public class CubesSpawn : MonoBehaviour
 {
 	[SerializeField] private GameObject[] cubesToSpawn;
+	[SerializeField] private LayerMask spawnObjtLayer;
 	public int numbersToSpawnTheObjects;
 	public int linePositionX; // posição da grid no plano X
 	public int linePositionZ; // posição da grid no plano Z
 	public float cubesPositionOffSet; // distancia dos cubos
+	public float raycastDistance;
+	public float overLapBoxSize;
 	public Vector3 originPosition = Vector3.zero;
-
+	public static CubesSpawn instance;
 	void Start()
 	{
+		instance = this;
         for (int i = 0; i < numbersToSpawnTheObjects; i++)
         {
 			SpawnCubes();
+			Debug.Log("chamou");
 		}	
 	}
 
-	void SpawnCubes()
+	public void SpawnCubes()
 	{
 		originPosition.x = Random.Range(-7.5f, 10.50f);
 		originPosition.z = Random.Range(30, 400);
@@ -35,10 +40,10 @@ public class CubesSpawn : MonoBehaviour
 				Vector3 spawnPositi = new Vector3(i * cubesPositionOffSet, 0, j * cubesPositionOffSet) + originPosition;
 				SpawnObjects(spawnPositi, Quaternion.identity);
 			}
-		}
+		}	
 	}
 
-	void SpawnObjects(Vector3 positionToSpawn, Quaternion rotationToSpawn)
+	public void SpawnObjects(Vector3 positionToSpawn, Quaternion rotationToSpawn)
 	{
 		int randomIndex = Random.Range(0, cubesToSpawn.Length);
 		GameObject cloneObj = Instantiate(cubesToSpawn[randomIndex], positionToSpawn, rotationToSpawn);

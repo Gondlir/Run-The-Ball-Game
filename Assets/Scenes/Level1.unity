@@ -1345,6 +1345,7 @@ GameObject:
   - component: {fileID: 1665767259}
   - component: {fileID: 1665767258}
   - component: {fileID: 1665767260}
+  - component: {fileID: 1665767261}
   m_Layer: 0
   m_Name: ProceduralLevelCreator
   m_TagString: Untagged
@@ -1365,10 +1366,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubesToSpawn:
   - {fileID: 1491916374847018, guid: 07946a1965cd1eb4db636b5c5b2fc452, type: 2}
+  spawnObjtLayer:
+    serializedVersion: 2
+    m_Bits: 512
   numbersToSpawnTheObjects: 55
   linePositionX: 9
   linePositionZ: 6
   cubesPositionOffSet: 2
+  raycastDistance: 5
+  overLapBoxSize: 5
   originPosition: {x: -6, y: 1, z: 0}
 --- !u!4 &1665767259
 Transform:
@@ -1401,6 +1407,24 @@ MonoBehaviour:
   cubesPositionOffSet: 1
   originPosition: {x: -6, y: 1, z: 0}
   randonPosition: {x: -6, y: 1, z: 0}
+--- !u!114 &1665767261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1665767257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7c217fc63615a4f8e6069041987705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1491916374847018, guid: 07946a1965cd1eb4db636b5c5b2fc452, type: 2}
+  spawnObjtLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  raycastDistance: 20
+  overLapBoxSize: 20
 --- !u!1 &1794061749
 GameObject:
   m_ObjectHideFlags: 3
@@ -2109,7 +2133,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120289913}
-  m_LocalRotation: {x: 0.09964392, y: 0.14446147, z: -0.014623253, w: 0.98437196}
+  m_LocalRotation: {x: 0.099643946, y: 0.1444615, z: -0.014623259, w: 0.98437196}
   m_LocalPosition: {x: -1.91, y: 3.71, z: 6.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
