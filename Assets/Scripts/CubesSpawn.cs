@@ -6,15 +6,13 @@ using UnityEngine;
 public class CubesSpawn : MonoBehaviour
 {
 	[SerializeField] private GameObject[] cubesToSpawn;
-	[SerializeField] private LayerMask spawnObjtLayer;
 	public int numbersToSpawnTheObjects;
 	public int linePositionX; // posição da grid no plano X
 	public int linePositionZ; // posição da grid no plano Z
 	public float cubesPositionOffSet; // distancia dos cubos
-	public float raycastDistance;
-	public float overLapBoxSize;
 	public Vector3 originPosition = Vector3.zero;
 	public static CubesSpawn instance;
+	private RaycastNoOverlapBehaviour raycastScript;
 	void Start()
 	{
 		instance = this;

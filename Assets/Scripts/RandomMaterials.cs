@@ -4,13 +4,15 @@ using UnityEngine;
 
 public sealed class RandomMaterials : MonoBehaviour {
 
-	[SerializeField] private MeshRenderer[] renderers; 
+	[SerializeField] private MeshRenderer[] renderersArray; 
+	[SerializeField] private MeshRenderer renderersStart; 
 	void Start () 
 	{
-		Color myColor = Random.ColorHSV();
-		//Color myColor = Random.ColorHSV(0f, .5f);
+		//Color myColor = Random.ColorHSV();
+		Color myColor = Random.ColorHSV(0f, .5f);
 		//Color myColor = Random.ColorHSV(0f, .25f, 0.4f, .1f);
-		ApplyColor(myColor, 0);
+		//ApplyColor(myColor, 0);
+		StartColor(myColor, 0);
 	}
 
 
@@ -18,9 +20,15 @@ public sealed class RandomMaterials : MonoBehaviour {
 	{
 		Material generateMaterial = new Material(Shader.Find("Standard"));
 		generateMaterial.SetColor("_Color", color);
-        for (int i = 0; i < renderers.Length; i++)
+        for (int i = 0; i < renderersArray.Length; i++)
         {
-			renderers[i].material = generateMaterial;
+			renderersArray[i].material = generateMaterial;
         }
+	}
+	private void StartColor(Color color, int index) 
+	{
+		Material generateMaterial = new Material(Shader.Find("Standard"));
+		generateMaterial.SetColor("_Color", color);
+		renderersStart.material = generateMaterial;
 	}
 }

@@ -11,7 +11,7 @@ public class Levels : MonoBehaviour {
     [SerializeField] private Slider sliderPlayerProgress;
     [SerializeField] private GameObject levelStartPanel;
     [SerializeField] private GameObject coinStartPanel;
-    [SerializeField] private Animator transitionAnimator;
+    //[SerializeField] private Animator transitionAnimator;
 
     public GameObject currentStatusLevelAndCoinProgressPanel;
     public GameObject deadPanel;

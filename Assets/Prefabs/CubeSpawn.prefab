@@ -140,5 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88143b8fe319a742bd6a43830755f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers:
-  - {fileID: 23319021925825738}
+  renderersArray: []
+  renderersStart: {fileID: 23319021925825738}
