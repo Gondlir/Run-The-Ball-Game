@@ -12,19 +12,19 @@ public class CubesSpawn : MonoBehaviour
 	public float cubesPositionOffSet; // distancia dos cubos
 	public Vector3 originPosition = Vector3.zero;
 	public static CubesSpawn instance;
-	private RaycastNoOverlapBehaviour raycastScript;
 	void Start()
 	{
 		instance = this;
-        for (int i = 0; i < numbersToSpawnTheObjects; i++)
-        {
+		//SpawnCubes();
+		for (int i = 0; i < numbersToSpawnTheObjects; i++)
+		{
 			SpawnCubes();
 			Debug.Log("chamou");
-		}	
+		}
 	}
-
 	public void SpawnCubes()
 	{
+		Debug.Log("ENTRO NO SPAWN CUBE");
 		originPosition.x = Random.Range(-7.5f, 10.50f);
 		originPosition.z = Random.Range(30, 400);
 		
